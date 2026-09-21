@@ -31,3 +31,13 @@ export function formatDateTime(iso: string): string {
     minute: '2-digit',
   });
 }
+
+/** Format ringkas untuk kartu, mis. "Rp 6-8jt". */
+export function formatSalaryCompact(job: Pick<Job, 'salaryMin' | 'salaryMax'>): string {
+  const jt = (n: number) => `${Number((n / 1_000_000).toFixed(1))}`.replace('.', ',');
+  const { salaryMin: min, salaryMax: max } = job;
+  if (min && max) return `Rp ${jt(min)}-${jt(max)}jt`;
+  if (min) return `Rp ${jt(min)}jt+`;
+  if (max) return `≤ Rp ${jt(max)}jt`;
+  return 'Gaji dirahasiakan';
+}

@@ -1,7 +1,9 @@
-import { useState } from 'react';
-import type { FormEvent } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-import { btn } from '../classes';
+import { MOCK_JOBS } from '../mockJobs';
+import { jobsApi } from '../api';
+import JobCard from '../components/JobCard';
+import { useAsync } from '../components/useAsync';
+import Navbar from '../components/Navbar';
 import { homePathFor } from '../components/ProtectedRoute';
 import { Spinner } from '../components/ui';
 import { useAuth } from '../context/AuthContext';
@@ -24,8 +26,8 @@ const CATEGORIES = [
 export default function LandingPage() {
   const { user, loading } = useAuth();
   const navigate = useNavigate();
-  const [keyword, setKeyword] = useState('');
-  const [location, setLocation] = useState('');
+  const { data, error } = useAsync(jobsApi.list);
+  const jobs = data ?? (error ? MOCK_JOBS : null); // SEMENTARA: dummy saat backend mati
 
   if (loading) return <Spinner />;
   if (user) return <Navigate to={homePathFor(user.role)} replace />;
@@ -37,61 +39,22 @@ export default function LandingPage() {
     navigate(`/jobs?${params.toString()}`);
   };
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    search(keyword, location);
-  };
-
   return (
     <div className="bg-white">
-      <header className="sticky top-0 z-10 border-b border-slate-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex min-h-16 max-w-6xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-2">
-          <Link to="/" className="text-xl font-extrabold text-slate-900">
-            indokerja<span className="font-normal text-brand">.id</span>
-          </Link>
-          <form
-            onSubmit={handleSubmit}
-            className="order-3 flex w-full items-center rounded-xl border border-slate-200 bg-white p-1 md:order-none md:mx-auto md:w-auto md:flex-1 md:max-w-xl"
-          >
-            <input
-              aria-label="Kata kunci"
-              className="min-w-0 flex-1 rounded-lg px-3 py-1.5 text-sm outline-none focus:bg-slate-50"
-              placeholder="Judul pekerjaan atau perusahaan"
-              value={keyword}
-              onChange={(e) => setKeyword(e.target.value)}
-            />
-            <input
-              aria-label="Lokasi"
-              className="min-w-0 flex-1 border-l border-slate-200 px-3 py-1.5 text-sm outline-none focus:bg-slate-50"
-              placeholder="Lokasi"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-            />
-            <button className={btn({ size: 'sm' })}>Cari</button>
-          </form>
-          <div className="ml-auto flex items-center gap-2 md:ml-0">
-            <Link to="/login" className={btn({ variant: 'outline', size: 'sm' })}>
-              Masuk
-            </Link>
-            <Link to="/register" className={btn({ size: 'sm' })}>
-              Daftar
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Hero */}
-      <section className="bg-gradient-to-b from-blue-50 to-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 text-center sm:py-24">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-brand">
+      <section className="flex min-h-[calc(100svh-4rem)] items-center bg-gradient-to-b from-amber-50 via-white to-white">
+        <div className="mx-auto w-full max-w-6xl px-4 py-16 text-center sm:py-24">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-accent-dark">
             Gerbang Karier Indonesia
           </p>
           <h1 className="mx-auto max-w-3xl text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl">
-            Temukan pekerjaan impian, <span className="text-brand">mulai dari sini</span>
+            Temukan pekerjaan impianmu dengan<span className="text-accent-dark"> mudah </span> <span>dan</span><span className="text-accent-dark"> transparan</span>
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-lg text-slate-600">
-            Ribuan lowongan dari perusahaan terbaik menunggu Anda. Lamar dan pantau statusnya di satu
-            tempat.
+            Ribuan lowongan dari perusahaan terbaik menunggumu. Lamar dan wujudkan masa depanmu. 
+            
           </p>
 
           
@@ -108,7 +71,7 @@ export default function LandingPage() {
             <button
               key={c.name}
               onClick={() => search(c.name)}
-              className="cursor-pointer rounded-xl border border-slate-200 bg-white p-5 text-left transition hover:border-brand hover:shadow-lg hover:shadow-blue-700/10"
+              className="cursor-pointer rounded-xl border border-slate-200 bg-white p-5 text-left transition hover:border-accent hover:shadow-lg hover:shadow-amber-500/10"
             >
               <span className="text-3xl">{c.icon}</span>
               <span className="mt-3 block font-semibold text-slate-900">{c.name}</span>
@@ -118,18 +81,37 @@ export default function LandingPage() {
       </section>
 
       
+      {/* Featured jobs */}
+      {jobs && jobs.length > 0 && (
+        <section className="bg-slate-50 py-16">
+          <div className="mx-auto max-w-6xl px-4">
+            <h2 className="text-center text-2xl font-bold text-slate-900">Lowongan Kerja Pilihan</h2>
+            <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {jobs.slice(0, 6).map((job) => (
+                <JobCard key={job.id} job={job} />
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Link to="/jobs" className="font-semibold text-brand hover:underline">
+                Lihat Semua Lowongan →
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Company CTA */}
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-brand p-8 text-white sm:flex-row sm:items-center sm:p-12">
           <div>
             <h2 className="text-2xl font-bold sm:text-3xl">Punya lowongan? Temukan kandidat terbaik.</h2>
-            <p className="mt-2 max-w-xl text-blue-100">
+            <p className="mt-2 max-w-xl text-slate-300">
               Pasang lowongan, kelola pelamar, dan perbarui status rekrutmen dalam satu dashboard.
             </p>
           </div>
           <Link
             to="/register"
-            className="shrink-0 rounded-lg bg-white px-6 py-3 font-semibold text-brand hover:bg-blue-50"
+            className="shrink-0 rounded-lg bg-accent px-6 py-3 font-semibold text-brand hover:bg-accent-dark"
           >
             Pasang Lowongan
           </Link>
