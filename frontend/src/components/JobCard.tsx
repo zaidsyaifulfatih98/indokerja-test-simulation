@@ -1,3 +1,4 @@
+import { MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { JOB_TYPE_LABEL } from '../constants';
 import type { Job } from '../types';
@@ -18,6 +19,9 @@ export default function JobCard({ job }: { job: Job }) {
         <span className="rounded-md bg-slate-100 px-2.5 py-1 text-sm text-slate-700">
           {JOB_TYPE_LABEL[job.jobType]}
         </span>
+        {job.hasApplied && (
+          <span className="rounded-md bg-green-100 px-2.5 py-1 text-sm text-green-700">Sudah dilamar</span>
+        )}
       </div>
 
       <div className="mt-1 flex items-center gap-3 border-b border-slate-200 pb-4">
@@ -26,7 +30,7 @@ export default function JobCard({ job }: { job: Job }) {
         </div>
         <div className="min-w-0">
           <p className="truncate font-medium text-brand">{job.company.name}</p>
-          <p className="truncate text-sm text-slate-600">📍 {job.location}</p>
+          <p className="truncate text-sm text-slate-600"><MapPin size={14} className="mr-1 inline -mt-0.5" />{job.location}</p>
         </div>
       </div>
     </Link>

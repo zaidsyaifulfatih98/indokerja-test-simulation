@@ -3,6 +3,9 @@ import { useAuth } from '../context/AuthContext';
 import type { Role } from '../types';
 import { Spinner } from './ui';
 
+/** SEMENTARA: set false untuk mengaktifkan kembali proteksi login/role. */
+const DISABLE_AUTH = true;
+
 export function homePathFor(role: Role): string {
   return role === 'COMPANY' ? '/company/jobs' : '/jobs';
 }
@@ -11,6 +14,8 @@ export function homePathFor(role: Role): string {
 export default function ProtectedRoute({ role }: { role?: Role }) {
   const { user, loading } = useAuth();
   const location = useLocation();
+
+  if (DISABLE_AUTH) return <Outlet />;
 
   if (loading) return <Spinner />;
   // Simpan tujuan awal supaya setelah login kembali ke halaman tersebut

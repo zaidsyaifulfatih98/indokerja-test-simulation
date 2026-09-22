@@ -1,0 +1,780 @@
+{
+ "users": [
+  {
+   "id": "u-seeker",
+   "name": "Budi Santoso",
+   "email": "seeker@demo.com",
+   "password": "demo123",
+   "role": "JOB_SEEKER"
+  },
+  {
+   "id": "u-company",
+   "name": "PT Putracipta Graha Indah",
+   "email": "company@demo.com",
+   "password": "demo123",
+   "role": "COMPANY"
+  },
+  {
+   "id": "u-cand1",
+   "name": "Siti Rahma",
+   "email": "siti@mail.com",
+   "password": "demo123",
+   "role": "JOB_SEEKER"
+  },
+  {
+   "id": "u-cand2",
+   "name": "Andi Pratama",
+   "email": "andi@mail.com",
+   "password": "demo123",
+   "role": "JOB_SEEKER"
+  },
+  {
+   "id": "u-cand3",
+   "name": "Dewi Lestari",
+   "email": "dewi@mail.com",
+   "password": "demo123",
+   "role": "JOB_SEEKER"
+  },
+  {
+   "id": "u-cand4",
+   "name": "Rizky Ramadhan",
+   "email": "rizky@mail.com",
+   "password": "demo123",
+   "role": "JOB_SEEKER"
+  },
+  {
+   "id": "u-cand5",
+   "name": "Maya Putri",
+   "email": "maya@mail.com",
+   "password": "demo123",
+   "role": "JOB_SEEKER"
+  },
+  {
+   "id": "u-cand6",
+   "name": "Fajar Nugroho",
+   "email": "fajar@mail.com",
+   "password": "demo123",
+   "role": "JOB_SEEKER"
+  },
+  {
+   "id": "c-domo",
+   "name": "PT Restoran Domo Sushi",
+   "email": "c-domo@demo.com",
+   "password": "demo123",
+   "role": "COMPANY"
+  },
+  {
+   "id": "c-satu",
+   "name": "Satu Digital",
+   "email": "c-satu@demo.com",
+   "password": "demo123",
+   "role": "COMPANY"
+  },
+  {
+   "id": "c-nusa",
+   "name": "Nusantara Media",
+   "email": "c-nusa@demo.com",
+   "password": "demo123",
+   "role": "COMPANY"
+  },
+  {
+   "id": "c-kreasi",
+   "name": "Kreasi Studio",
+   "email": "c-kreasi@demo.com",
+   "password": "demo123",
+   "role": "COMPANY"
+  },
+  {
+   "id": "c-bank",
+   "name": "Bank Sejahtera",
+   "email": "c-bank@demo.com",
+   "password": "demo123",
+   "role": "COMPANY"
+  }
+ ],
+ "jobs": [
+  {
+   "id": "j1",
+   "title": "HR Generalist",
+   "description": "Kami mencari HR Generalist yang berpengalaman dan bersemangat untuk bergabung dengan tim kami.\n\nTanggung jawab utama meliputi perencanaan, eksekusi, dan pelaporan pekerjaan harian.",
+   "requirements": "Minimal D3/S1 pada bidang terkait.\nPengalaman 1-3 tahun.\nKomunikasi dan kerja tim yang baik.",
+   "location": "Jakarta Barat, DKI Jakarta",
+   "salaryMin": 6000000,
+   "salaryMax": 8000000,
+   "jobType": "FULL_TIME",
+   "createdAt": "2026-09-21T12:00:00Z",
+   "companyId": "u-company",
+   "companyName": "PT Putracipta Graha Indah"
+  },
+  {
+   "id": "j2",
+   "title": "Recruitment Specialist",
+   "description": "Kami mencari Recruitment Specialist yang berpengalaman dan bersemangat untuk bergabung dengan tim kami.\n\nTanggung jawab utama meliputi perencanaan, eksekusi, dan pelaporan pekerjaan harian.",
+   "requirements": "Minimal D3/S1 pada bidang terkait.\nPengalaman 1-3 tahun.\nKomunikasi dan kerja tim yang baik.",
+   "location": "Jakarta Barat, DKI Jakarta",
+   "salaryMin": 7000000,
+   "salaryMax": 9000000,
+   "jobType": "FULL_TIME",
+   "createdAt": "2026-09-19T12:00:00Z",
+   "companyId": "u-company",
+   "companyName": "PT Putracipta Graha Indah"
+  },
+  {
+   "id": "j3",
+   "title": "Admin Kantor",
+   "description": "Kami mencari Admin Kantor yang berpengalaman dan bersemangat untuk bergabung dengan tim kami.\n\nTanggung jawab utama meliputi perencanaan, eksekusi, dan pelaporan pekerjaan harian.",
+   "requirements": "Minimal D3/S1 pada bidang terkait.\nPengalaman 1-3 tahun.\nKomunikasi dan kerja tim yang baik.",
+   "location": "Jakarta Barat, DKI Jakarta",
+   "salaryMin": 4500000,
+   "salaryMax": 5500000,
+   "jobType": "CONTRACT",
+   "createdAt": "2026-09-16T12:00:00Z",
+   "companyId": "u-company",
+   "companyName": "PT Putracipta Graha Indah"
+  },
+  {
+   "id": "j4",
+   "title": "Resepsionis",
+   "description": "Kami mencari Resepsionis yang berpengalaman dan bersemangat untuk bergabung dengan tim kami.\n\nTanggung jawab utama meliputi perencanaan, eksekusi, dan pelaporan pekerjaan harian.",
+   "requirements": "Minimal D3/S1 pada bidang terkait.\nPengalaman 1-3 tahun.\nKomunikasi dan kerja tim yang baik.",
+   "location": "Kab. Bekasi, Jawa Barat",
+   "salaryMin": 4900000,
+   "salaryMax": 5400000,
+   "jobType": "PART_TIME",
+   "createdAt": "2026-09-20T12:00:00Z",
+   "companyId": "c-domo",
+   "companyName": "PT Restoran Domo Sushi"
+  },
+  {
+   "id": "j5",
+   "title": "Frontend Developer",
+   "description": "Kami mencari Frontend Developer yang berpengalaman dan bersemangat untuk bergabung dengan tim kami.\n\nTanggung jawab utama meliputi perencanaan, eksekusi, dan pelaporan pekerjaan harian.",
+   "requirements": "Minimal D3/S1 pada bidang terkait.\nPengalaman 1-3 tahun.\nKomunikasi dan kerja tim yang baik.",
+   "location": "Bandung, Jawa Barat",
+   "salaryMin": 8000000,
+   "salaryMax": 12000000,
+   "jobType": "CONTRACT",
+   "createdAt": "2026-09-18T12:00:00Z",
+   "companyId": "c-satu",
+   "companyName": "Satu Digital"
+  },
+  {
+   "id": "j6",
+   "title": "Digital Marketing",
+   "description": "Kami mencari Digital Marketing yang berpengalaman dan bersemangat untuk bergabung dengan tim kami.\n\nTanggung jawab utama meliputi perencanaan, eksekusi, dan pelaporan pekerjaan harian.",
+   "requirements": "Minimal D3/S1 pada bidang terkait.\nPengalaman 1-3 tahun.\nKomunikasi dan kerja tim yang baik.",
+   "location": "Surabaya, Jawa Timur",
+   "salaryMin": 5000000,
+   "salaryMax": null,
+   "jobType": "FULL_TIME",
+   "createdAt": "2026-09-17T12:00:00Z",
+   "companyId": "c-nusa",
+   "companyName": "Nusantara Media"
+  },
+  {
+   "id": "j7",
+   "title": "UI/UX Designer Intern",
+   "description": "Kami mencari UI/UX Designer Intern yang berpengalaman dan bersemangat untuk bergabung dengan tim kami.\n\nTanggung jawab utama meliputi perencanaan, eksekusi, dan pelaporan pekerjaan harian.",
+   "requirements": "Minimal D3/S1 pada bidang terkait.\nPengalaman 1-3 tahun.\nKomunikasi dan kerja tim yang baik.",
+   "location": "Yogyakarta, DIY",
+   "salaryMin": null,
+   "salaryMax": null,
+   "jobType": "INTERNSHIP",
+   "createdAt": "2026-09-15T12:00:00Z",
+   "companyId": "c-kreasi",
+   "companyName": "Kreasi Studio"
+  },
+  {
+   "id": "j8",
+   "title": "Customer Service",
+   "description": "Kami mencari Customer Service yang berpengalaman dan bersemangat untuk bergabung dengan tim kami.\n\nTanggung jawab utama meliputi perencanaan, eksekusi, dan pelaporan pekerjaan harian.",
+   "requirements": "Minimal D3/S1 pada bidang terkait.\nPengalaman 1-3 tahun.\nKomunikasi dan kerja tim yang baik.",
+   "location": "Tangerang, Banten",
+   "salaryMin": 4000000,
+   "salaryMax": 4500000,
+   "jobType": "FULL_TIME",
+   "createdAt": "2026-09-14T12:00:00Z",
+   "companyId": "c-bank",
+   "companyName": "Bank Sejahtera"
+  },
+  {
+   "id": "j9",
+   "title": "Content Creator",
+   "description": "Kami mencari Content Creator yang berpengalaman dan bersemangat untuk bergabung dengan tim kami.\n\nTanggung jawab utama meliputi perencanaan, eksekusi, dan pelaporan pekerjaan harian.",
+   "requirements": "Minimal D3/S1 pada bidang terkait.\nPengalaman 1-3 tahun.\nKomunikasi dan kerja tim yang baik.",
+   "location": "Bali",
+   "salaryMin": 5000000,
+   "salaryMax": 7000000,
+   "jobType": "FREELANCE",
+   "createdAt": "2026-09-13T12:00:00Z",
+   "companyId": "c-nusa",
+   "companyName": "Nusantara Media"
+  },
+  {
+   "id": "j10",
+   "title": "Backend Developer",
+   "description": "Kami mencari Backend Developer yang berpengalaman dan bersemangat untuk bergabung dengan tim kami.\n\nTanggung jawab utama meliputi perencanaan, eksekusi, dan pelaporan pekerjaan harian.",
+   "requirements": "Minimal D3/S1 pada bidang terkait.\nPengalaman 1-3 tahun.\nKomunikasi dan kerja tim yang baik.",
+   "location": "Jakarta Selatan, DKI Jakarta",
+   "salaryMin": 10000000,
+   "salaryMax": 15000000,
+   "jobType": "FULL_TIME",
+   "createdAt": "2026-09-12T12:00:00Z",
+   "companyId": "c-satu",
+   "companyName": "Satu Digital"
+  }
+ ],
+ "applications": [
+  {
+   "id": "a1",
+   "jobId": "j1",
+   "candidateId": "u-cand1",
+   "status": "APPLIED",
+   "coverLetter": "Saya tertarik dengan posisi ini dan siap berkontribusi.",
+   "createdAt": "2026-09-16T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a2",
+   "jobId": "j1",
+   "candidateId": "u-cand2",
+   "status": "REVIEWING",
+   "coverLetter": null,
+   "createdAt": "2026-09-17T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a3",
+   "jobId": "j1",
+   "candidateId": "u-cand3",
+   "status": "SHORTLISTED",
+   "coverLetter": "Saya tertarik dengan posisi ini dan siap berkontribusi.",
+   "createdAt": "2026-09-18T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a4",
+   "jobId": "j1",
+   "candidateId": "u-cand4",
+   "status": "REJECTED",
+   "coverLetter": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a5",
+   "jobId": "j1",
+   "candidateId": "u-cand5",
+   "status": "ACCEPTED",
+   "coverLetter": "Saya tertarik dengan posisi ini dan siap berkontribusi.",
+   "createdAt": "2026-09-20T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a6",
+   "jobId": "j1",
+   "candidateId": "u-cand6",
+   "status": "APPLIED",
+   "coverLetter": null,
+   "createdAt": "2026-09-21T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a7",
+   "jobId": "j2",
+   "candidateId": "u-cand1",
+   "status": "REVIEWING",
+   "coverLetter": "Saya tertarik dengan posisi ini dan siap berkontribusi.",
+   "createdAt": "2026-09-16T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a8",
+   "jobId": "j2",
+   "candidateId": "u-cand2",
+   "status": "SHORTLISTED",
+   "coverLetter": null,
+   "createdAt": "2026-09-17T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a9",
+   "jobId": "j2",
+   "candidateId": "u-cand3",
+   "status": "REJECTED",
+   "coverLetter": "Saya tertarik dengan posisi ini dan siap berkontribusi.",
+   "createdAt": "2026-09-18T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a10",
+   "jobId": "j2",
+   "candidateId": "u-cand4",
+   "status": "ACCEPTED",
+   "coverLetter": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a11",
+   "jobId": "j2",
+   "candidateId": "u-cand5",
+   "status": "APPLIED",
+   "coverLetter": "Saya tertarik dengan posisi ini dan siap berkontribusi.",
+   "createdAt": "2026-09-20T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a12",
+   "jobId": "j2",
+   "candidateId": "u-cand6",
+   "status": "APPLIED",
+   "coverLetter": null,
+   "createdAt": "2026-09-21T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a13",
+   "jobId": "j3",
+   "candidateId": "u-cand1",
+   "status": "SHORTLISTED",
+   "coverLetter": "Saya tertarik dengan posisi ini dan siap berkontribusi.",
+   "createdAt": "2026-09-16T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a14",
+   "jobId": "j3",
+   "candidateId": "u-cand2",
+   "status": "REJECTED",
+   "coverLetter": null,
+   "createdAt": "2026-09-17T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a15",
+   "jobId": "j3",
+   "candidateId": "u-cand3",
+   "status": "ACCEPTED",
+   "coverLetter": "Saya tertarik dengan posisi ini dan siap berkontribusi.",
+   "createdAt": "2026-09-18T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a16",
+   "jobId": "j4",
+   "candidateId": "u-cand1",
+   "status": "REJECTED",
+   "coverLetter": "Saya tertarik dengan posisi ini dan siap berkontribusi.",
+   "createdAt": "2026-09-16T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a17",
+   "jobId": "j4",
+   "candidateId": "u-cand2",
+   "status": "ACCEPTED",
+   "coverLetter": null,
+   "createdAt": "2026-09-17T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a18",
+   "jobId": "j4",
+   "candidateId": "u-cand3",
+   "status": "APPLIED",
+   "coverLetter": "Saya tertarik dengan posisi ini dan siap berkontribusi.",
+   "createdAt": "2026-09-18T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a19",
+   "jobId": "j5",
+   "candidateId": "u-cand1",
+   "status": "ACCEPTED",
+   "coverLetter": "Saya tertarik dengan posisi ini dan siap berkontribusi.",
+   "createdAt": "2026-09-16T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a20",
+   "jobId": "j5",
+   "candidateId": "u-cand2",
+   "status": "APPLIED",
+   "coverLetter": null,
+   "createdAt": "2026-09-17T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a21",
+   "jobId": "j5",
+   "candidateId": "u-cand3",
+   "status": "APPLIED",
+   "coverLetter": "Saya tertarik dengan posisi ini dan siap berkontribusi.",
+   "createdAt": "2026-09-18T12:00:00Z",
+   "updatedAt": "2026-09-19T12:00:00Z"
+  },
+  {
+   "id": "a-me1",
+   "jobId": "j4",
+   "candidateId": "u-seeker",
+   "status": "REVIEWING",
+   "coverLetter": null,
+   "createdAt": "2026-09-20T12:00:00Z",
+   "updatedAt": "2026-09-21T12:00:00Z"
+  },
+  {
+   "id": "a-me2",
+   "jobId": "j5",
+   "candidateId": "u-seeker",
+   "status": "APPLIED",
+   "coverLetter": null,
+   "createdAt": "2026-09-21T12:00:00Z",
+   "updatedAt": "2026-09-21T12:00:00Z"
+  }
+ ],
+ "history": [
+  {
+   "id": "ha10",
+   "applicationId": "a1",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-16T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha20",
+   "applicationId": "a2",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-17T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha21",
+   "applicationId": "a2",
+   "fromStatus": "APPLIED",
+   "toStatus": "REVIEWING",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": "u-company"
+  },
+  {
+   "id": "ha30",
+   "applicationId": "a3",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-18T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha31",
+   "applicationId": "a3",
+   "fromStatus": "APPLIED",
+   "toStatus": "SHORTLISTED",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": "u-company"
+  },
+  {
+   "id": "ha40",
+   "applicationId": "a4",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha41",
+   "applicationId": "a4",
+   "fromStatus": "APPLIED",
+   "toStatus": "REJECTED",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": "u-company"
+  },
+  {
+   "id": "ha50",
+   "applicationId": "a5",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-20T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha51",
+   "applicationId": "a5",
+   "fromStatus": "APPLIED",
+   "toStatus": "ACCEPTED",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": "u-company"
+  },
+  {
+   "id": "ha60",
+   "applicationId": "a6",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-21T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha70",
+   "applicationId": "a7",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-16T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha71",
+   "applicationId": "a7",
+   "fromStatus": "APPLIED",
+   "toStatus": "REVIEWING",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": "u-company"
+  },
+  {
+   "id": "ha80",
+   "applicationId": "a8",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-17T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha81",
+   "applicationId": "a8",
+   "fromStatus": "APPLIED",
+   "toStatus": "SHORTLISTED",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": "u-company"
+  },
+  {
+   "id": "ha90",
+   "applicationId": "a9",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-18T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha91",
+   "applicationId": "a9",
+   "fromStatus": "APPLIED",
+   "toStatus": "REJECTED",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": "u-company"
+  },
+  {
+   "id": "ha100",
+   "applicationId": "a10",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha101",
+   "applicationId": "a10",
+   "fromStatus": "APPLIED",
+   "toStatus": "ACCEPTED",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": "u-company"
+  },
+  {
+   "id": "ha110",
+   "applicationId": "a11",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-20T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha120",
+   "applicationId": "a12",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-21T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha130",
+   "applicationId": "a13",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-16T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha131",
+   "applicationId": "a13",
+   "fromStatus": "APPLIED",
+   "toStatus": "SHORTLISTED",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": "u-company"
+  },
+  {
+   "id": "ha140",
+   "applicationId": "a14",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-17T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha141",
+   "applicationId": "a14",
+   "fromStatus": "APPLIED",
+   "toStatus": "REJECTED",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": "u-company"
+  },
+  {
+   "id": "ha150",
+   "applicationId": "a15",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-18T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha151",
+   "applicationId": "a15",
+   "fromStatus": "APPLIED",
+   "toStatus": "ACCEPTED",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": "u-company"
+  },
+  {
+   "id": "ha160",
+   "applicationId": "a16",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-16T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha161",
+   "applicationId": "a16",
+   "fromStatus": "APPLIED",
+   "toStatus": "REJECTED",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": "u-company"
+  },
+  {
+   "id": "ha170",
+   "applicationId": "a17",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-17T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha171",
+   "applicationId": "a17",
+   "fromStatus": "APPLIED",
+   "toStatus": "ACCEPTED",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": "u-company"
+  },
+  {
+   "id": "ha180",
+   "applicationId": "a18",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-18T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha190",
+   "applicationId": "a19",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-16T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha191",
+   "applicationId": "a19",
+   "fromStatus": "APPLIED",
+   "toStatus": "ACCEPTED",
+   "note": null,
+   "createdAt": "2026-09-19T12:00:00Z",
+   "changedById": "u-company"
+  },
+  {
+   "id": "ha200",
+   "applicationId": "a20",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-17T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "ha210",
+   "applicationId": "a21",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-18T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "hm0",
+   "applicationId": "a-me1",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-20T12:00:00Z",
+   "changedById": null
+  },
+  {
+   "id": "hm1",
+   "applicationId": "a-me1",
+   "fromStatus": "APPLIED",
+   "toStatus": "REVIEWING",
+   "note": null,
+   "createdAt": "2026-09-21T12:00:00Z",
+   "changedById": "c-domo"
+  },
+  {
+   "id": "hm2",
+   "applicationId": "a-me2",
+   "fromStatus": null,
+   "toStatus": "APPLIED",
+   "note": null,
+   "createdAt": "2026-09-21T12:00:00Z",
+   "changedById": null
+  }
+ ]
+}

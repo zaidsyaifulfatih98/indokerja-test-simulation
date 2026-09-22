@@ -1,0 +1,103 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+
+model Users {
+  id  String  @id @default(uuid())
+  name String @db.VarChar(50)
+  email String  @unique
+  password String
+  role  Roles[]
+  jobs    Jobs[]
+  applications Applications[]
+  histories Histories[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  deletedAt DateTime?
+
+  
+}
+
+model Jobs {
+  id String @id @default(uuid())
+  title String @db.VarChar(100)
+  descripton String @db.Text
+  requirements String @db.Text
+  location String @db.Text
+  salary_min  Decimal 
+  salary_max  Decimal
+  job_type JobTypes[]
+  applications Applications[]
+  
+  user_id String
+  user Users @relation(fields: [user_id], references: [id])
+
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  deletedAt DateTime?
+
+}
+
+model Applications {
+  id  String @id @default(uuid())
+  status Statuses[]
+  cover_letter String? @db.Text
+  histories Histories[]
+
+  jobs_id String
+  Job Jobs @relation(fields: [jobs_id], references: [id])
+
+  user_id String
+  user Users @relation(fields: [user_id], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  deletedAt DateTime?
+}
+
+model Histories {
+  id String @id @default(uuid())
+  from_status Statuses?
+  to_status Statuses
+  note String? @db.Text
+
+  user_id String
+  user Users @relation(fields: [user_id], references: [id])
+
+  application_id String
+  application Applications @relation(fields: [application_id], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  deletedAt DateTime?
+}
+
+enum Statuses {
+  APPLIED
+  REVIEWING
+  SHORLISTED
+  REJECTED
+  ACCEPTED
+}
+
+
+enum JobTypes {
+  FULL_TIME
+  PART_TIME
+  CONTRACT
+  INTERNSHIP
+  FREELANCE
+}
+
+enum Roles {
+  JOB_SEEKER
+  COMPANY
+}

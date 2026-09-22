@@ -1,4 +1,8 @@
 import axios, { AxiosError } from 'axios';
+import { mockAdapter } from '../mock/mockServer';
+
+/** SEMENTARA: true = pakai data JSON (src/mock/db.json) tanpa backend. */
+const USE_MOCK = true;
 
 const TOKEN_KEY = 'indokerja_token';
 
@@ -10,6 +14,7 @@ export const tokenStorage = {
 
 export const http = axios.create({
   baseURL: `${import.meta.env.VITE_API_URL ?? ''}/api`,
+  ...(USE_MOCK && { adapter: mockAdapter }),
 });
 
 http.interceptors.request.use((config) => {

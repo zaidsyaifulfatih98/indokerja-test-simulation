@@ -19,7 +19,7 @@ export default function Layout() {
   return (
     <>
       <header className="sticky top-0 z-10 border-b border-slate-200 bg-white">
-        <div className="mx-auto flex min-h-15 max-w-5xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-2">
+        <div className="mx-auto flex min-h-15 max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-2">
           <Link to="/" className="text-xl font-extrabold text-slate-900">
             indokerja<span className="font-normal text-brand">.id</span>
           </Link>
@@ -55,7 +55,7 @@ export default function Layout() {
           )}
         </div>
       </header>
-      <main className="mx-auto max-w-5xl px-4 pb-12 pt-6">
+      <main className="mx-auto max-w-6xl px-4 pb-12 pt-6">
         <Outlet />
       </main>
     </>
