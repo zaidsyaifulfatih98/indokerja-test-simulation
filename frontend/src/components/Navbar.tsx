@@ -3,11 +3,19 @@ import type { FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { btn } from '../classes';
 import logo from '../assets/logo.png';
+import { useAuth } from '../context/AuthContext';
+import { homePathFor } from './ProtectedRoute';
 
 export default function LandingNavbar() {
   const navigate = useNavigate();
+  const { user, logout } = useAuth();
   const [keyword, setKeyword] = useState('');
   const [location, setLocation] = useState('');
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -44,12 +52,25 @@ export default function LandingNavbar() {
           <button className={btn({ size: 'sm' })}>Cari</button>
         </form>
         <div className="ml-auto flex items-center gap-2 md:ml-0">
-          <Link to="/login" className={btn({ variant: 'outline', size: 'sm' })}>
-            Masuk
-          </Link>
-          <Link to="/register" className={btn({ size: 'sm' })}>
-            Daftar
-          </Link>
+          {user ? (
+            <>
+              <Link to={homePathFor(user.role)} className={btn({ variant: 'outline', size: 'sm' })}>
+                Dashboard
+              </Link>
+              <button className={btn({ size: 'sm' })} onClick={handleLogout}>
+                Keluar
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className={btn({ variant: 'outline', size: 'sm' })}>
+                Masuk
+              </Link>
+              <Link to="/register" className={btn({ size: 'sm' })}>
+                Daftar
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </header>

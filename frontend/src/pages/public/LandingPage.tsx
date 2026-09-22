@@ -1,13 +1,9 @@
 import { ArrowRight, ChartColumn, Factory, GraduationCap, Headset, Laptop, Megaphone, Palette, Users } from 'lucide-react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
-import { MOCK_JOBS } from '../../mockJobs';
+import { Link, useNavigate } from 'react-router-dom';
 import { jobsApi } from '../../api';
 import JobCard from '../../components/JobCard';
 import { useAsync } from '../../components/useAsync';
 import Navbar from '../../components/Navbar';
-import { homePathFor } from '../../components/ProtectedRoute';
-import { Spinner } from '../../components/ui';
-import { useAuth } from '../../context/AuthContext';
 
 
 
@@ -25,13 +21,8 @@ const CATEGORIES = [
 
 
 export default function LandingPage() {
-  const { user, loading } = useAuth();
   const navigate = useNavigate();
-  const { data, error } = useAsync(jobsApi.list);
-  const jobs = data ?? (error ? MOCK_JOBS : null); // SEMENTARA: dummy saat backend mati
-
-  if (loading) return <Spinner />;
-  if (user) return <Navigate to={homePathFor(user.role)} replace />;
+  const { data: jobs } = useAsync(jobsApi.list);
 
   const search = (q: string, loc = '') => {
     const params = new URLSearchParams();
