@@ -13,7 +13,7 @@ model Users {
   name String @db.VarChar(50)
   email String  @unique
   password String
-  role  Roles[]
+  role  Roles
   jobs    Jobs[]
   applications Applications[]
   histories Histories[]
@@ -28,12 +28,12 @@ model Users {
 model Jobs {
   id String @id @default(uuid())
   title String @db.VarChar(100)
-  descripton String @db.Text
+  description String @db.Text
   requirements String @db.Text
   location String @db.Text
-  salary_min  Decimal 
-  salary_max  Decimal
-  job_type JobTypes[]
+  salary_min  Decimal?
+  salary_max  Decimal?
+  job_type JobTypes
   applications Applications[]
   
   user_id String
@@ -48,7 +48,7 @@ model Jobs {
 
 model Applications {
   id  String @id @default(uuid())
-  status Statuses[]
+  status Statuses @default(APPLIED)
   cover_letter String? @db.Text
   histories Histories[]
 
@@ -83,7 +83,7 @@ model Histories {
 enum Statuses {
   APPLIED
   REVIEWING
-  SHORLISTED
+  SHORTLISTED
   REJECTED
   ACCEPTED
 }

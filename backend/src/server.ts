@@ -1,16 +1,25 @@
 import express from 'express'
-import userRouter from './routers/user.router'
+import cors from 'cors'
+import authRouter from './routers/auth.router'
+import jobRouter from './routers/job.router'
+import applicationRouter from './routers/application.router'
+
+process.loadEnvFile()
 
 const app = express()
-const PORT = 8080
+const PORT = Number(process.env.PORT) || 8080
 
+app.use(cors({ origin: process.env.CORS_ORIGIN ?? '*' }))
 app.use(express.json())
 
-app.use("/api", userRouter)
+app.use("/api/auth", authRouter)
+app.use("/api/jobs", jobRouter)
+app.use("/api/applications", applicationRouter)
 
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
     console.error(err)
-    res.status(500).json({
+    const statusCode = (err as { statusCode?: number }).statusCode ?? 500
+    res.status(statusCode).json({
         success: false,
         message: err.message
     })
